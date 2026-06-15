@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#F8F3ED;
+  color:#4B2E2E;
+  overflow-x:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar{
+  background:rgba(90,62,54,.92);
+  backdrop-filter:blur(10px);
+
+  padding:20px 60px;   /* increased spacing */
+
+  width:100%;
+}
+
+.navbar-brand{
+  font-size:24px;
+  font-weight:700;
+  color:#B2CD9C !important;
+}
+
+.nav-link{
+  color:#B2CD9C !important;
+  font-size:15px;
+  font-weight:500;
+  margin-left:32px;   /* more spacing between links */
+  transition:.3s;
+  position:relative;
+}
+
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:#B2CD9C;
+  transition:.3s;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+.nav-link:hover{
+  color:white !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+  linear-gradient(
+    135deg,
+    #F8F3ED 0%,
+    #EEF5E7 100%
+  );
+}
+
+.hero-content{
+  max-width:850px;
+  margin:auto;
+}
+
+.intro-text{
+  color:#B2CD9C;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.hero-name{
+  font-size:62px;
+  font-weight:800;
+  color:#4B2E2E;
+  line-height:1.15;
+  margin-bottom:12px;
+}
+
+.hero-name span{
+  color:#5A3E36;
+}
+
+.typing-text{
+  font-size:26px;
+  font-weight:600;
+  color:#7A5A50;
+  margin-bottom:22px;
+  min-height:40px;
+}
+
+.hero-description{
+  font-size:17px;
+  line-height:1.9;
+  color:#6B4F42;
+  max-width:650px;
+  margin:auto;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.custom-btn{
+  background:#5A3E36;
+  color:#B2CD9C;
+  border:none;
+  padding:13px 30px;
+  border-radius:12px;
+  font-size:15px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.custom-btn:hover{
+  background:#B2CD9C;
+  color:#5A3E36;
+  transform:translateY(-4px);
+}
+
+.resume-btn{
+  border:1.5px solid #B2CD9C;
+  background:transparent;
+  color:#5A3E36;
+  padding:13px 30px;
+  border-radius:12px;
+  font-size:15px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.resume-btn:hover{
+  background:#B2CD9C;
+  color:#5A3E36;
+  transform:translateY(-4px);
+}
+
+.social-icons{
+  margin-top:35px;
+}
+
+.social-icons a{
+  font-size:24px;
+  color:#5A3E36;
+  margin:0 12px;
+  transition:.3s;
+}
+
+.social-icons a:hover{
+  color:#B2CD9C;
+  transform:translateY(-4px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about-section,
+.skills-section,
+.projects-section,
+.contact-section{
+  padding:110px 0;
+}
+
+.section-heading{
+  font-size:42px;
+  font-weight:800;
+  color:#5A3E36;
+  text-align:center;
+  margin-bottom:50px;
+  position:relative;
+}
+
+.section-heading::after{
+  content:'';
+  width:70px;
+  height:4px;
+  background:#B2CD9C;
+  position:absolute;
+  left:50%;
+  bottom:-12px;
+  transform:translateX(-50%);
+  border-radius:10px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.about-card,
+.contact-card,
+.skill-card,
+.project-card{
+  background:#EAF4E2;
+  border-radius:24px;
+  padding:35px;
+  transition:.3s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.info-box:hover{
+  transform:translateY(-8px);
+}
+
+.info-box{
+  background:#B2CD9C;
+  border-radius:20px;
+  padding:24px;
+  transition:.3s;
+}
+
+.project-card h3{
+  color:#5A3E36;
+  margin-bottom:14px;
+}
+
+.project-card p{
+  color:#6B4F42;
+  line-height:1.8;
+}
+
+.footer{
+  background:#5A3E36;
+  color:#B2CD9C;
+  text-align:center;
+  padding:24px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:991px){
+
+.hero-name{
+  font-size:42px;
+}
+
+.typing-text{
+  font-size:22px;
+}
+
+.hero-description{
+  font-size:15px;
+}
+
+.section-heading{
+  font-size:34px;
+}
+
+.hero-buttons{
+  flex-direction:column;
+  align-items:center;
+}
+}
+
